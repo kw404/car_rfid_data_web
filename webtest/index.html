@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>天气反馈</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+
+            #weatherFeedback {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+                margin: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>天气反馈</h1>
+
+        <button onclick="showWeather('真好')">A</button>
+        <button onclick="showWeather('有病')">B</button>
+
+        <div id="weatherFeedback"></div>
+
+        <script>
+            function showWeather(feedback) {
+                document.getElementById('weatherFeedback').innerText = '今天天氣' + feedback;
+            }
+        </script>
+
+    </body>
+</html>

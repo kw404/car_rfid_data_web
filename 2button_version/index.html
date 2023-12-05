@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 控制</title>
+</head>
+<body>
+  <h1>ESP32 Web控制</h1>
+  <button onclick="sendData('A')">按鈕 A</button>
+  <button onclick="sendData('B')">按鈕 B</button>
+
+  <script>
+    function sendData(button) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '/button?value=' + button, true);
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
